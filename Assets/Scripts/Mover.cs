@@ -6,14 +6,14 @@ public class Mover : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Start()
+    void Start()
     {
         // Prints out game instructions to the console on game start.
         PrintInstructions();
     }
 
     // Update is called once per frame
-    private void Update()
+    void Update()
     {
         // Implements XYZ movement for the player.
         MovePlayer();

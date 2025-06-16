@@ -5,12 +5,12 @@ public class ObjectHit : MonoBehaviour
     // Occurs when a collision occurs
     private void OnCollisionEnter(Collision collision)
     {
-        PrintCollisionMessage();
-    }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Changes color to red when the player collides with the object.
+            GetComponent<MeshRenderer>().material.color = Color.red;
 
-    private void PrintCollisionMessage()
-    {
-        // Prints object hit message to the console.
-        Debug.Log("Object Hit!");
+            gameObject.tag = "Hit";
+        }
     }
 }
